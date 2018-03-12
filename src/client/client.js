@@ -1,11 +1,10 @@
 import './styles.scss'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import RecipeList from './recipeList'
-import { loadAllRecipes } from './recipeRepository'
+import {RoomList, loadAllRooms} from './roomList'
 
-const recipeRepository = loadAllRecipes()
+const roomsPromise = loadAllRooms()
 
 ReactDOM.render(
-	<RecipeList recipeRepository={recipeRepository} />,
+	<RoomList roomsPromise={roomsPromise} />,
 	document.getElementById('main'))
